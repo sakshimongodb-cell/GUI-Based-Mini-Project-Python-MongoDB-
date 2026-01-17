@@ -70,5 +70,22 @@ Before running the application, ensure you have the following installed:
 * `requirements.txt` - Project dependencies.
 * `README.md` - Project documentation.
 
+  ## MongoDB connection script
+
+  # --- 1. DATABASE CONNECTION ---
+try:
+    client = pymongo.MongoClient("mongodb://localhost:27017/")
+    db = client["SakshiMongoDB"]
+    collection = db["Library"]
+    client.server_info() 
+except Exception as e:
+    print(f"Connection Error: {e}")
+
+  ![WhatsApp Image 2026-01-17 at 9 47 09 PM](https://github.com/user-attachments/assets/46757f8a-c689-4cf0-9f60-94d8e337868e)
+
+
+  ![WhatsApp Image 2026-01-17 at 9 47 09 PM](https://github.com/user-attachments/assets/57ca87a3-d182-4b1e-854a-fc9fcec1c7d7)
+
+
 ## 📄 License
 This project is open-source and available under the MIT License.
